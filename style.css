@@ -1,0 +1,165 @@
+:root {
+    --main--bg--color: #fff;
+    --main--text--color: black;
+    --main--bg--background: url('pngegg.png');
+}
+
+[data-theme = "Dark"] {
+    --main--bg--color: #1e1f26;
+    --main--text--color: #ccc;
+    --main--bg--background: url('image.png');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    background-color: var(--main--bg--color);
+    position: relative;
+    transition: all ease 0.2s;
+
+}
+
+.page-header {
+
+    font-size: 2rem;
+    color: var(--main--text--color);
+    padding: 1em 0;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: all ease 0.2s;
+
+}
+
+.clock {
+    
+    min-height: 18em;
+    display: flex;
+    min-width: 18em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main--bg--color);
+    background-image: var(--main--bg--background);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 5px solid var(--main--bg--color);
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+    transition: all ease 0.2s;
+
+}
+
+
+.clock::before {
+
+    content: "";
+    position: absolute;
+    height: 0.75em;
+    width: 0.75em;
+    background-color: var(--main--text--color);
+    border: 2px solid var(--main--bg--color);
+    border-radius: 50%;
+    z-index: 10;
+    transition: all ease 0.2s;
+
+}
+
+.hour, .minute, .second {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.hour {
+
+    height: 10em;
+    width: 10em;
+
+}
+
+.minute {
+
+    height: 12em;
+    width: 12em;
+
+}
+
+.second {
+
+    height: 14em;
+    width: 14em;
+
+}
+
+.hour::before {
+    
+        content: "";
+        position: absolute;
+        height: 50%;
+        width: 6px;
+        background-color: var(--main--text--color);
+        border-radius: 6px;
+}
+
+.minute::before {
+    
+        content: "";
+        height: 50%;
+        width: 4px;
+        background-color: var(--main--text--color);
+        border-radius: 6px;
+}
+
+.second::before {
+    
+        content: "";
+        height: 60%;
+        width: 2px;
+        background-color: red;
+        border-radius: 2px;
+}
+
+
+.switch {
+    margin: 4em auto;
+    bottom: 0;
+}
+
+.btn-switch {
+
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid var(--main--text--color);
+    background-color: var(--main--bg--color);
+    color: var(--main--text--color);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all ease 0.2s; 
+
+}
+
+
+
+
+
+
+
